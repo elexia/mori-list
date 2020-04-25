@@ -108,12 +108,20 @@ $dark-grey: #707070;
   font-size: 42px;
 }
 
+.centered {
+  text-align: center;
+}
+
 .normal {
   font-weight: 400;
 }
 
 .bold {
   font-weight: 600;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 /* Borders (width, color, position) */
@@ -185,7 +193,18 @@ $dark-grey: #707070;
 }
 
 /* Common sizings */
+
 .logo-image-sm {
-    height: 20px;
-    width: 20px
+  height: 15px;
+  width: 15px
+}
+
+.logo-image-md {
+  height: 25px;
+  width: 25px;
+}
+
+.logo-image-lg {
+  height: 40px;
+  width: 40px;
 }

@@ -3,17 +3,17 @@
   <!-- Navbar -->
   <div class="navbar bg-white padding-2" role="navigation">
     <ul class="flex flex-space">
-      <span class="navbar__items-left">
-        <a class="text-primary bold" href="/">
+      <span class="navbar__items-left text-4">
+        <a class="text-primary bold" routerLink="/">
           mori<span class="text-dark-grey normal">list</span>
-          <img src="/assets/images/animal-crossing-leaf.png" class="logo-image-sm" />
+          <img src="/assets/images/animal-crossing-leaf.png" class="logo-image-sm logo-image" />
         </a>
       </span>
-      <span class="navbar__items-right flex flex-space">
-        <a href="/home" class="text-dark-grey">home</a>
-        <a href="/wishlist" class="text-dark-grey">wishlist</a>
-        <a href="/login" class="text-dark-grey">log in</a>
-        <a href="/signup" class="text-dark-grey">sign up</a>
+      <span class="navbar__items-right text-3 flex flex-space">
+        <a routerLink="/" class="navbar__item text-dark-grey" [class.active]="onHomepage()">home</a>
+        <a routerLink="/wishlist" class="navbar__item text-dark-grey" [class.active]="onWishlist()">wishlist</a>
+        <a routerLink="/login" class="navbar__item text-dark-grey" [class.active]="onLogin()">log in</a>
+        <a routerLink="/signup" class="navbar__item text-dark-grey" [class.active]="onSignup()">sign up</a>
       </span>
     </ul>
   </div>
@@ -21,9 +21,9 @@
   <router-outlet></router-outlet>
 
   <!-- Footer -->
-  <footer>
-      <!-- To do: Add socials -->
-      Made with ❤ by Lexi
+  <footer class="bg-primary-dark text-white padding-2 centered">
+      Made with ❤ by
+      <a target="_blank" href="https://github.com/elexia" class="text-white underline">Lexi</a>
   </footer>
 
 </div>
