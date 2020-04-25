@@ -1,0 +1,191 @@
+/* ******************************************** */
+/*  CSS UTILITIES                               */
+/*  Reusable classes for common visual tweaks   */
+/* ******************************************** */
+
+
+/* Colors */
+
+$primary-light: #dcebbc;
+$primary: #9ade4d;
+$primary-dark: #68b115;
+$secondary: #ffbd3a;
+$white: #fff;
+$light-grey: #e4e4e4;
+$grey: #c6c6c6;
+$dark-grey: #707070;
+
+/* Color Modifiers */
+
+.text-primary-light {
+  color: $primary-light;
+}
+
+.text-primary {
+  color: $primary;
+}
+
+.text-primary-dark {
+  color: $primary-dark;
+}
+
+.text-secondary {
+  color: $secondary;
+}
+
+.text-light-grey {
+  color: $light-grey;
+}
+
+.text-grey {
+  color: $grey;
+}
+
+.text-dark-grey {
+  color: $dark-grey;
+}
+
+.text-white {
+  color: $white;
+}
+
+.bg-primary-light {
+  background-color: $primary-light;
+}
+
+.bg-primary {
+  background-color: $primary;
+}
+
+.bg-primary-dark {
+  background-color: $primary-dark;
+}
+
+.bg-secondary {
+  background-color: $secondary;
+}
+
+.bg-light-grey {
+  background-color: $light-grey;
+}
+
+.bg-grey {
+  background-color: $grey;
+}
+
+.bg-dark-grey {
+  background-color: $dark-grey;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+/* Text Sizes and Weights */
+// Based on GitLab typography style guide
+
+.text-1 {
+  font-size: 12px;
+}
+
+.text-2 {
+  font-size: 14px;
+}
+
+.text-3 {
+  font-size: 16px;
+}
+
+.text-4 {
+  font-size: 20px;
+}
+
+.text-5 {
+  font-size: 28px;
+}
+
+.text-6 {
+  font-size: 42px;
+}
+
+.normal {
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+/* Borders (width, color, position) */
+
+.card {
+  background-color: $white;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Flexbox Utilities */
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  align-items: center;
+}
+
+.flex-end {
+  align-items: flex-end;
+}
+
+.flex-space {
+  justify-content: space-between;
+}
+
+// To do: Add flex utilities for flex items
+
+/* Padding and Margin Helpers */
+
+.padding-1 {
+  padding: 5px;
+}
+
+.padding-2 {
+  padding: 10px;
+}
+
+.margin-1 {
+  margin: 5px;
+}
+
+.margin-2 {
+  margin: 10px;
+}
+
+.margin-tb-1 {
+  margin: 5px 0;
+}
+
+.margin-tb-2 {
+  margin: 10px 0;
+}
+
+.margin-tb-1 {
+  margin: 0 5px;
+}
+
+.margin-tb-2 {
+  margin: 0 10px;
+}
+
+/* Common sizings */
+.logo-image-sm {
+    height: 20px;
+    width: 20px
+}

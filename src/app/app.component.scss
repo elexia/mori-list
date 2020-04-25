@@ -1,0 +1,14 @@
+@import '../styles.scss';
+
+.content {
+  height: 100vh;
+}
+
+.navbar__items-left {
+  @extend .text-4;
+}
+
+.navbar__items-right {
+  @extend .text-3;
+  width: 300px;
+}

@@ -1,0 +1,29 @@
+/* ******************************************** */
+/*  Imports                                     */
+/*  Import global styles from ./style folder    */
+/* ******************************************** */
+
+/* Utilities */
+@import './styles/utilities';
+
+/* ******************************************** */
+/*  Reset                                       */
+/*  Reset default stylings on HTML elements     */
+/* ******************************************** */
+
+body {
+  margin: 0px;
+}
+
+h1, h2, h3, h4, h5, h6, div, p, a {
+  font-family: Segoe UI, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
