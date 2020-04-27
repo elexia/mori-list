@@ -120,16 +120,30 @@ $dark-grey: #707070;
   font-weight: 600;
 }
 
+.black {
+  font-weight: 700;
+}
+
 .underline {
   text-decoration: underline;
 }
 
-/* Borders (width, color, position) */
+/* Components */
 
 .card {
   background-color: $white;
   border: none;
   border-radius: 10px;
+}
+
+.success {
+  background: $primary;
+  color: $white;
+}
+
+.warn {
+  background: $secondary;
+  color: $white;
 }
 
 /* Flexbox Utilities */
@@ -159,6 +173,10 @@ $dark-grey: #707070;
 // To do: Add flex utilities for flex items
 
 /* Padding and Margin Helpers */
+
+.full-width {
+  width: 100%;
+}
 
 .padding-1 {
   padding: 5px;

@@ -3,7 +3,10 @@
 /*  Import global styles from ./style folder    */
 /* ******************************************** */
 
-/* Utilities */
+// Angular material
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+// Utilities
 @import './styles/utilities';
 
 /* ******************************************** */
@@ -27,4 +30,13 @@ a {
 ul {
   margin: 0;
   padding: 0;
+}
+
+button {
+  @extend .text-3;
+  border: none;
+  padding: 10px 20px;
+  background: $grey;
+  color: white;
+  border-radius: 4px;
 }

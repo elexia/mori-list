@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { MatDialog, MatDialogRef } from "@angular/material/dialog";
 import { NavigationService } from './services/navigation/navigation.service';
+import { LoginComponent } from './reusable-components/login/login.component';
 import { SimpleFade } from './animations/fades';
 
 @Component({
@@ -12,7 +14,8 @@ export class AppComponent {
   public title = 'mori-list';
 
   constructor(
-    public navigationService: NavigationService
+    public navigationService: NavigationService,
+    public dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -26,11 +29,14 @@ export class AppComponent {
     return this.navigationService.onWishlist();
   }
 
-  public onLogin(): boolean {
-    return this.navigationService.onLogin();
+  public onLogin() {
+    this.dialog.open(LoginComponent, {width: '500px'})
+      .afterClosed().subscribe(() => {
+        // Do something
+      });
   }
 
-  public onSignup(): boolean {
-    return this.navigationService.onSignup();
+  public onSignup() {
+    // to do : bring up signup component
   }
 }

@@ -1,0 +1,22 @@
+<section class="centered content">
+  <header class="text-5 black">
+    Login
+    <img class="logo-image-sm" src="/assets/animal-crossing-leaf.png" />
+  </header>
+  <p class="text-3"> Welcome back! Please log in to continue. </p>
+  <form class="login-form flex-column">
+    <mat-form-field>
+      <mat-label>username or email</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>password</mat-label>
+      <input matInput>
+    </mat-form-field>
+  </form>
+  <p class="text-2">
+    Already have an account?
+    <span (click)="signup()" class="text-primary underline">Sign up.</span>
+  </p>
+  <button class="success full-width">log in</button>
+</section>

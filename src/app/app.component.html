@@ -1,7 +1,7 @@
 <div class="content bg-primary-light" role="main">
 
   <!-- Navbar -->
-  <div class="navbar bg-white padding-2" role="navigation">
+  <nav class="navbar bg-white padding-2" role="navigation">
     <ul class="flex flex-space">
       <span class="navbar__items-left text-4">
         <a class="text-primary bold" routerLink="/">
@@ -12,11 +12,11 @@
       <span class="navbar__items-right text-3 flex flex-space">
         <a routerLink="/" class="navbar__item text-dark-grey" [class.active]="onHomepage()">home</a>
         <a routerLink="/wishlist" class="navbar__item text-dark-grey" [class.active]="onWishlist()">wishlist</a>
-        <a routerLink="/login" class="navbar__item text-dark-grey" [class.active]="onLogin()">log in</a>
-        <a routerLink="/signup" class="navbar__item text-dark-grey" [class.active]="onSignup()">sign up</a>
+        <a (click)="onLogin()" class="navbar__item text-dark-grey">log in</a>
+        <a (click)="onSignup()"class="navbar__item text-dark-grey">sign up</a>
       </span>
     </ul>
-  </div>
+  </nav>
 
   <router-outlet></router-outlet>
 

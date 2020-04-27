@@ -3,14 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { WishlistPageComponent } from'./components/wishlist-page/wishlist-page.component';
-import { LoginPageComponent } from'./components/login-page/login-page.component';
-import { SignupPageComponent } from'./components/signup-page/signup-page.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
-  { path: 'wishlist', component: WishlistPageComponent },
-  { path: 'login', component: LoginPageComponent },
-  { path: 'signup', component: SignupPageComponent }
+  { path: 'wishlist', component: WishlistPageComponent }
 ];
 
 @NgModule({

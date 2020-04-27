@@ -16,12 +16,4 @@ export class NavigationService {
     return this._router.url === '/wishlist';
   }
 
-  public onLogin(): boolean {
-    return this._router.url === '/login';
-  }
-
-  public onSignup(): boolean {
-    return this._router.url === '/signup';
-  }
-
 }
