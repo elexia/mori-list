@@ -7,6 +7,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: false
   },
+  name: {
+    type: String,
+    required: false
+  },
   username: {
     type: String,
     required: false
@@ -14,6 +18,10 @@ const userSchema = new mongoose.Schema({
   email: {
     type: String,
     reuired: false
+  },
+  created: {
+    type: Date,
+    default: Date.now
   },
   hash: String,
   salt: String

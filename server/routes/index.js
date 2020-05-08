@@ -9,7 +9,7 @@ const secret = "MOCHI_IS_THE_CUTEST_CAT";
 const auth = jwt({ secret: secret, userProperty: 'payload' });
 
 // Authentication
-router.post('/register', authenticationController.register);
+router.post('/signup', authenticationController.signup);
 router.post('/login', authenticationController.login);
 
 module.exports = router;

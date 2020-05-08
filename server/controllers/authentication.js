@@ -7,7 +7,7 @@ const sendJSONresponse = function(res, status, content) {
   res.json(content);
 }
 
-module.exports.register = function(req, res) {
+module.exports.signup = function(req, res) {
   const user = new User();
   user.accountType = req.body.accountType;
   user.username = req.body.username;

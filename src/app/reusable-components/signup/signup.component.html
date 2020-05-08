@@ -1,1 +1,33 @@
-<p>signup works!</p>
+<section class="centered content">
+  <header class="text-5 black">
+    <img class="logo-image-md" src="/assets/images/animal-crossing-leaf.png" />
+    Signup
+  </header>
+  <p class="text-3">
+    Welcome to mori-list! Sign up to
+    create your own personalized ACNH wishlist.
+  </p>
+  <form class="login-form flex-column">
+    <mat-form-field>
+      <mat-label>name</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>username</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>email</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>password</mat-label>
+      <input matInput>
+    </mat-form-field>
+  </form>
+  <p class="text-2">
+    Already have an account?
+    <span (click)="login()" class="text-primary underline">Log in.</span>
+  </p>
+  <button class="success full-width" (click)="signup()">sign up</button>
+</section>

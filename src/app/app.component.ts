@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatDialog, MatDialogRef } from "@angular/material/dialog";
 import { NavigationService } from './services/navigation/navigation.service';
 import { LoginComponent } from './reusable-components/login/login.component';
+import { SignupComponent } from './reusable-components/signup/signup.component';
 import { SimpleFade } from './animations/fades';
 
 @Component({
@@ -37,6 +38,9 @@ export class AppComponent {
   }
 
   public onSignup() {
-    // to do : bring up signup component
+    this.dialog.open(SignupComponent, {width: '500px'})
+      .afterClosed().subscribe(() => {
+        // Do something
+      });
   }
 }
