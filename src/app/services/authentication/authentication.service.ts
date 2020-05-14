@@ -24,6 +24,7 @@ export class AuthenticationService {
   ) { }
 
   public signup(user: User): Observable<any> {
+    user.email = user.email.toLowerCase();
     return this.request('post', 'signup', user);
   }
 
