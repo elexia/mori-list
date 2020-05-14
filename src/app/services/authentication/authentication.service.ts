@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { User } from '../../models/user';
@@ -19,6 +20,7 @@ export class AuthenticationService {
 
   constructor(
     private http: HttpClient,
+    private router: Router,
   ) { }
 
   public signup(user: User): Observable<any> {
@@ -27,6 +29,35 @@ export class AuthenticationService {
 
   public login(user: User): Observable<any> {
     return this.request('post', 'login', user);
+  }
+
+  public logout(): void {
+    this.token = '';
+    this.userRole = '';
+    window.localStorage.removeItem('mean-token');
+    window.localStorage.removeItem('mean-user-role');
+    this.router.navigate(['/']);
+  }
+
+  public getUser(): User {
+    const token = this.getToken();
+    let payload;
+    if (token) {
+      payload = token.split('.')[1];
+      payload = window.atob(payload);
+      return JSON.parse(payload);
+    } else {
+      return null;
+    }
+  }
+
+  public isLoggedIn(): boolean {
+    const user = this.getUser();
+    if (user) {
+      return user.exp > Date.now() / 1000;
+    } else {
+      return false;
+    }
   }
 
   private getToken(): string {

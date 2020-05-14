@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const dbURI = 'mongodb+srv://lexi:1P9ty3apejBm9xYj@stardust-zibzx.mongodb.net/test?retryWrites=true&w=majority';
+const dbURI = 'mongodb+srv://lexi:1P9ty3apejBm9xYj@stardust-zibzx.mongodb.net/mori-list?retryWrites=true&w=majority';
 mongoose.connect(dbURI, { useNewUrlParser: true });
 
 // Connection Events

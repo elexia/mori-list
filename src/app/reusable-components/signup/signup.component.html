@@ -10,19 +10,19 @@
   <form class="login-form flex-column">
     <mat-form-field>
       <mat-label>name</mat-label>
-      <input matInput>
+      <input [formControl]="name" matInput required>
     </mat-form-field>
     <mat-form-field>
       <mat-label>username</mat-label>
-      <input matInput>
+      <input [formControl]="username" matInput required>
     </mat-form-field>
     <mat-form-field>
       <mat-label>email</mat-label>
-      <input matInput>
+      <input [formControl]="email" matInput required>
     </mat-form-field>
     <mat-form-field>
       <mat-label>password</mat-label>
-      <input matInput>
+      <input [formControl]="password" matInput type="password" required>
     </mat-form-field>
   </form>
   <p class="text-2">

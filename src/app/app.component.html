@@ -12,8 +12,9 @@
       <span class="navbar__items-right text-3 flex flex-space">
         <a routerLink="/" class="navbar__item text-dark-grey" [class.active]="onHomepage()">home</a>
         <a routerLink="/wishlist" class="navbar__item text-dark-grey" [class.active]="onWishlist()">wishlist</a>
-        <a (click)="onLogin()" class="navbar__item text-dark-grey">log in</a>
-        <a (click)="onSignup()"class="navbar__item text-dark-grey">sign up</a>
+        <a *ngIf="isLoggedIn()" (click)="onLogout()" class="navbar__item text-dark-grey">sign out</a>
+        <a *ngIf="!isLoggedIn()" (click)="onLogin()" class="navbar__item text-dark-grey">log in</a>
+        <a *ngIf="!isLoggedIn()" (click)="onSignup()"class="navbar__item text-dark-grey">sign up</a>
       </span>
     </ul>
   </nav>

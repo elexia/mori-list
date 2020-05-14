@@ -37,8 +37,8 @@ userSchema.methods.validPassword = function(password) {
   return this.hash === hash;
 }
 
-userSchema.generateJwt = function() {
-  const exipry = new Date();
+userSchema.methods.generateJwt = function() {
+  const expiry = new Date();
   expiry.setDate(expiry.getDate() + 7);
 
   let secret = 'MOCHI_IS_THE_CUTEST_CAT';
@@ -46,7 +46,7 @@ userSchema.generateJwt = function() {
     _id: this._id,
     email: this.email,
     username: this.username,
-    exp: parseInt(exiry.getTime() / 1000),
+    exp: parseInt(expiry.getTime() / 1000),
     permissions: [ this.accountType ]
   }, secret);
 };

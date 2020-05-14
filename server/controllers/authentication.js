@@ -12,6 +12,7 @@ module.exports.signup = function(req, res) {
   user.accountType = req.body.accountType;
   user.username = req.body.username;
   user.email = req.body.email;
+  user.name = req.body.name;
   user.setPassword(req.body.password);
 
   user.save(function(err, data) {

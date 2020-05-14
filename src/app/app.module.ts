@@ -5,6 +5,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 // Components
 import { AppRoutingModule } from './app-routing.module';
@@ -34,6 +36,9 @@ import { AuthenticationService } from './services/authentication/authentication.
     MatFormFieldModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatSnackBarModule,
   ],
   providers: [
     AuthenticationService,
