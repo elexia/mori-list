@@ -1,0 +1,16 @@
+.content-container {
+  max-height: calc(100vh - 100px);
+  overflow: auto;
+  margin: 10px 0px;
+}
+
+.card {
+  flex-basis: 25%;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.5);
+}

@@ -1,0 +1,9 @@
+<div *ngIf="filteredVillagers" class="content-container flex flex-wrap flex-center">
+  <div *ngFor="let villager of filteredVillagers" class="card centered">
+    <img class="image-xl" [src]="villager.icon"/>
+    <div class="text-2">{{villager.name}}</div>
+  </div>
+</div>
+<div *ngIf="!filteredVillagers">
+  No villagers yet!
+</div>

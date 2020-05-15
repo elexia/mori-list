@@ -21,6 +21,20 @@ footer {
   cursor: pointer;
 }
 
+.filter {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.filter__item {
+  @extend .centered;
+  @extend .dashed;
+  @extend .margin-lr-1;
+  border-color: $grey;
+  color: $dark-grey;
+  width: 110px;
+}
+
 .active {
   border-bottom: 3px solid $primary;
   transition: border-bottom 500ms;

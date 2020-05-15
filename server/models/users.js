@@ -1,54 +1,82 @@
 const mongoose = require('mongoose');
-const crypto = require('crypto');
-const jwt = require('jsonwebtoken');
 
-const userSchema = new mongoose.Schema({
-  accountType: {
-    type: String,
-    required: false
-  },
+const villagerSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: false
+    required: true
   },
-  username: {
+  icon: {
     type: String,
-    required: false
+    required: true
   },
-  email: {
+  house: {
     type: String,
-    reuired: false
+    required: true
   },
-  created: {
-    type: Date,
-    default: Date.now
+  species: {
+    type: String,
+    reuired: true
   },
-  hash: String,
-  salt: String
+  gender: {
+    type: String,
+    reuired: true
+  },
+  personality: {
+    type: String,
+    reuired: true
+  },
+  hobby: {
+    type: String,
+    reuired: true
+  },
+  birthday: {
+    type: String,
+    reuired: true
+  },
+  catchphrase: {
+    type: String,
+    reuired: true
+  },
+  favoriteSong: {
+    type: String,
+    reuired: true
+  },
+  style1: {
+    type: String,
+    reuired: true
+  },
+  style2: {
+    type: String,
+    reuired: true
+  },
+  color1: {
+    type: String,
+    reuired: true
+  },
+  color2: {
+    type: String,
+    reuired: true
+  },
+  wallpaper: {
+    type: String,
+    reuired: true
+  },
+  flooring: {
+    type: String,
+    reuired: true
+  },
+  furnitureList: {
+    type: String,
+    reuired: true
+  },
+  filename: {
+    type: String,
+    reuired: true
+  },
+  uniqueEntryId: {
+    type: String,
+    reuired: true
+  },
 });
 
-userSchema.methods.setPassword = function(password) {
-  this.salt = crypto.randomBytes(16).toString('hex');
-  this.hash = crypto.pbkdf2Sync(password, this.salt, 1000, 64, 'sha512').toString('hex');
-};
-
-userSchema.methods.validPassword = function(password) {
-  const hash = crypto.pbkdf2Sync(password, this.salt, 1000, 64, 'sha512').toString('hex');
-  return this.hash === hash;
-}
-
-userSchema.methods.generateJwt = function() {
-  const expiry = new Date();
-  expiry.setDate(expiry.getDate() + 7);
-
-  let secret = 'MOCHI_IS_THE_CUTEST_CAT';
-  return jwt.sign({
-    _id: this._id,
-    email: this.email,
-    username: this.username,
-    exp: parseInt(expiry.getTime() / 1000),
-    permissions: [ this.accountType ]
-  }, secret);
-};
-
-mongoose.model('User', userSchema);
+mongoose.model('Villager', villagerSchema);

@@ -32,3 +32,4 @@ process.on('SIGTERM', function() {
 
 // Bring in database models
 require('./users');
+require('./villagers');

@@ -136,6 +136,11 @@ $dark-grey: #707070;
   border-radius: 10px;
 }
 
+.dashed {
+  border: 2px dashed;
+  border-radius: 4px;
+}
+
 .success {
   background: $primary;
   color: $white;
@@ -160,6 +165,7 @@ $dark-grey: #707070;
 
 .flex-center {
   align-items: center;
+  justify-content: center;
 }
 
 .flex-end {
@@ -168,6 +174,10 @@ $dark-grey: #707070;
 
 .flex-space {
   justify-content: space-between;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 // To do: Add flex utilities for flex items
@@ -202,15 +212,37 @@ $dark-grey: #707070;
   margin: 10px 0;
 }
 
-.margin-tb-1 {
+.margin-lr-1 {
   margin: 0 5px;
 }
 
-.margin-tb-2 {
+.margin-lr-2 {
   margin: 0 10px;
 }
 
+.margin-lr
+
 /* Common sizings */
+
+.image-sm {
+  height: 30px;
+  width: 30px;
+}
+
+.image-md {
+  height: 50px;
+  width: 50px;
+}
+
+.image-lg {
+  height: 75px;
+  width: 75px;
+}
+
+.image-xl {
+  height: 100px;
+  width: 100px;
+}
 
 .logo-image-sm {
   height: 15px;
