@@ -6,17 +6,17 @@
   <p class="text-3"> Welcome back! Please log in to continue. </p>
   <form class="login-form flex-column">
     <mat-form-field>
-      <mat-label>username or email</mat-label>
-      <input matInput>
+      <mat-label>email</mat-label>
+      <input [formControl]="email" matInput required>
     </mat-form-field>
     <mat-form-field>
       <mat-label>password</mat-label>
-      <input matInput>
+      <input [formControl]="password" matInput type="password" required>
     </mat-form-field>
   </form>
   <p class="text-2">
     Don't have an account?
     <span (click)="signup()" class="text-primary underline">Sign up.</span>
   </p>
-  <button class="success full-width">log in</button>
+  <button class="success full-width" (click)="login()">log in</button>
 </section>

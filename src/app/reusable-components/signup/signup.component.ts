@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { MatDialogRef } from '@angular/material/dialog'
+import { MatDialogRef } from '@angular/material/dialog';
 import { AuthenticationService } from '../../services/authentication/authentication.service';
 import { User } from '../../models/user';
 

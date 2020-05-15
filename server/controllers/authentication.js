@@ -34,7 +34,7 @@ module.exports.login = function(req, res) {
     if (user) {
       sendJSONresponse(res, 200, { token: user.generateJwt(), accountType: user.accountType });
     } else {
-      sendJSONrsponse(res, 401, info);
+      sendJSONresponse(res, 401, info);
     }
   })(req, res);
 };
