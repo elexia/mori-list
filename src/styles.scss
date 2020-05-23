@@ -12,6 +12,9 @@
 // Utilities
 @import './styles/utilities';
 
+// Mat Icons
+@import './styles/mat-icons';
+
 
 /* ******************************************** */
 /*  Reset                                       */
@@ -44,4 +47,15 @@ button {
   color: white;
   border-radius: 4px;
   cursor: pointer;
+}
+
+*:focus {
+    outline: none;
+}
+
+select {
+  border: none;
+  margin-right: 10px;
+  padding: 5px 5px;
+  border-radius: 4px;
 }

@@ -1,9 +1,29 @@
+<div *ngIf="!filteredVillagers">
+  No villagers yet!
+</div>
 <div *ngIf="filteredVillagers" class="content-container flex flex-wrap flex-center">
   <div *ngFor="let villager of filteredVillagers" class="card centered">
     <img class="image-xl" [src]="villager.icon"/>
     <div class="text-2">{{villager.name}}</div>
   </div>
-</div>
-<div *ngIf="!filteredVillagers">
-  No villagers yet!
+  <div class="flex flex-center arrow-container">
+    <button *ngIf="page > 1" (click)="changePage(page - 1)" class="arrow-button prev">
+      <i class="material-icons">arrow_back</i>
+    </button>
+    <div *ngFor="let closePage of getRelevantPages()"
+         class="page margin-lr-1 centered padding-1 bg-white"
+         [class.active]="closePage === page"
+         (click)="changePage(closePage)">
+      {{closePage}}
+    </div>
+    <button *ngIf="villagers && page < villagers.length / number" (click)="changePage(page + 1)" class="arrow-button next">
+      <i class="material-icons">arrow_forward</i>
+    </button>
+  </div>
+  <div class="flex flex-center arrow-container">
+      <select (change)="changeNumber($event.target.value)">
+        <option *ngFor="let option of PAGE_OPTIONS" [value]="option">{{option}}</option>
+      </select>
+      <div> results per page </div>
+  </div>
 </div>
