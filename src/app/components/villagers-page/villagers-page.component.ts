@@ -19,13 +19,14 @@ export class VillagersPageComponent implements OnInit {
 
   constructor(
     private dataService: DataService,
-  ) { }
+  ) {
+  }
 
   ngOnInit(): void {
     this.dataService.getVillagers().subscribe((villagers) => {
       this.villagers = villagers.sort((a, b) => a.name.localeCompare(b.name));
       this.filteredVillagers = this.villagers.slice(0, this.number);
-    });
+    }); 
   }
 
   public changePage(page: number): void {

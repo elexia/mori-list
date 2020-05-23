@@ -21,6 +21,13 @@ footer {
   cursor: pointer;
 }
 
+.signup {
+  background: #9ade4d;
+  color: white;
+  padding: 2px 25px;
+  border-radius: 4px;
+}
+
 .filter {
   padding-top: 10px;
   padding-bottom: 20px;
@@ -47,5 +54,11 @@ footer {
 @media only screen and (max-width: 600px) {
   .navbar__items-right {
     width: 230px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .navbar__items-right {
+    display: none;
   }
 }

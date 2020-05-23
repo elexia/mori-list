@@ -16,3 +16,15 @@ module.exports.list = function(req, res) {
       }
     });
 };
+
+module.exports.get = function(req, res) {
+  let name = req.params.name;
+  Villager.findOne({ name: new RegExp(`^${name}$`, 'i') })
+    .exec(function(err, villager) {
+      if (villager) {
+        sendJSONresponse(res, 200, villager);
+      } else {
+        sendJSONresponse(res, 404, {"message": "Could not find specified villager."})
+      }
+    })
+}

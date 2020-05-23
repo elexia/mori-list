@@ -15,5 +15,6 @@ router.post('/login', authenticationController.login);
 
 // Villagers
 router.get('/villagers', villagerController.list);
+router.get('/villager/:name', villagerController.get);
 
 module.exports = router;

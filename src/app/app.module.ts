@@ -14,8 +14,10 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { WishlistPageComponent } from './components/wishlist-page/wishlist-page.component';
 import { VillagersPageComponent } from './components/villagers-page/villagers-page.component';
+import { VillagerPageComponent } from './components/villager-page/villager-page.component';
 import { LoginComponent } from './reusable-components/login/login.component';
 import { SignupComponent } from './reusable-components/signup/signup.component';
+import { SpinnerComponent } from './reusable-components/spinner/spinner.component';
 
 // Services
 import { NavigationService } from './services/navigation/navigation.service';
@@ -28,8 +30,10 @@ import { DataService } from './services/data/data.service';
     HomePageComponent,
     WishlistPageComponent,
     VillagersPageComponent,
+    VillagerPageComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,

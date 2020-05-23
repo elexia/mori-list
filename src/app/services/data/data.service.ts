@@ -21,6 +21,10 @@ export class DataService {
     return this.http.get(`/api/villagers`, { headers: { Authorization: `Bearer ${this.getToken()}` } });
   }
 
+  public getVillager(name): Observable<any> {
+    return this.http.get(`/api/villager/${name}`, { headers: { Authorization: `Bearer ${this.getToken()}`} });
+  }
+
   private getToken(): string {
     if (!this.token) this.token = localStorage.getItem('mean-token');
     return this.token;

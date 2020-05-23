@@ -1,6 +1,7 @@
 <div *ngIf="!filteredVillagers">
-  No villagers yet!
+  <app-spinner></app-spinner>
 </div>
+
 <div *ngIf="filteredVillagers" class="content-container flex flex-wrap flex-center">
   <div *ngFor="let villager of filteredVillagers" class="card centered">
     <img class="image-xl" [src]="villager.icon"/>

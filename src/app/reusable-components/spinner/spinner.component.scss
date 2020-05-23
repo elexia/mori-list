@@ -1,0 +1,36 @@
+@import '../../../styles.scss';
+
+.content {
+  width: 100%;
+}
+
+.spinner {
+  animation-name: spinning-circle;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  width: 75px;
+  height: 75px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.spinner img {
+  width: 100%;
+  height: auto;
+}
+
+@-webkit-keyframes spinning-circle {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
